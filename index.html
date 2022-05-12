@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html>
-  <script>
-    $(function () {
-      //判断页面是否是在微信浏览器打开
-      //对浏览器的UserAgent进行正则匹配，不含有微信独有标识的则为其他浏览器
-      var useragent = navigator.userAgent;
-      if (useragent.match(/MicroMessenger/i) != "MicroMessenger") {
-        window.location.href = "wxError.html"; //若不是微信浏览器，跳转到温馨error页面
-      }
-    });
-  </script>
   <head>
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"
     />
     <meta charset="utf-8" />
+    <script>
+      $(function () {
+        //判断页面是否是在微信浏览器打开
+        //对浏览器的UserAgent进行正则匹配，不含有微信独有标识的则为其他浏览器
+        var useragent = navigator.userAgent;
+        if (useragent.match(/MicroMessenger/i) != "MicroMessenger") {
+          window.location.href = "wxError.html"; //若不是微信浏览器，跳转到温馨error页面
+        }
+      });
+    </script>
   </head>
 
   <body style="text-align: center">
